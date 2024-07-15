@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSYAALAH</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%; 
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+            border-radius: 0; 
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        .top-space {
+    background-image: url("ngopi kantor.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0;
+    text-align: center;
+    position: relative; 
+}
+
+.top-space::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+}
+
+.top-space h2, .top-space p {
+    position: relative; 
+    z-index: 1; 
+    color: white;
+}
+
+        .services {
+            background: #f4f4f4;
+            padding: 50px 0; 
+            text-align: center;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-item {
+            background: white;
+            margin: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            width: calc(30% - 30px);
+            max-width: 300px; 
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item img {
+            width: 50%; 
+            border-radius: 8px;
+        }
+
+        .service-item h3 {
+            margin-top: 15px; 
+        }
+
+        .service-description {
+            display: none;
+            margin-top: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2px 0;
+            margin-top: 20px; 
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logone.png" alt="logo">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="html tampilan.html">HOME</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="join.html">JOIN US</a></li>
+                  
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="top-space">
+
+        <h2>Selamat Datang di Website Kami</h2>
+        <p>Di sini Anda dapat menemukan layanan-layanan yang kami tawarkan.</p>
+    </section>
+
+    <section class="services">
+        <h2>Servis dan Layanan</h2>
+        <div class="services-grid">
+            <div class="service-item" onclick="toggleDescription(this)">
+                <img src="komu.jpg" alt="Service 1">
+                <h3>Web Development</h3>
+                <p>Desain...</p>
+                <div class="service-description">
+                    <p>Deskripsi lengkap untuk Web Development...</p>
+                </div>
+            </div>
+            <div class="service-item" onclick="toggleDescription(this)">
+                <img src="hape.jpg" alt="Service 2">
+                <h3>Mobile</h3>
+                <p>Perkembangan...</p>
+                <div class="service-description">
+                    <p>Deskripsi lengkap untuk Mobile Apps...</p>
+                </div>
+            </div>
+            <div class="service-item" onclick="toggleDescription(this)">
+                <img src="serpis.jpg" alt="Service 3">
+                <h3>Custom App</h3>
+                <p>Implementasi...</p>
+                <div class="service-description">
+                    <p>Deskripsi lengkap untuk Custom App...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Perusahaan Kami. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script>
+        function toggleDescription(element) {
+            const description = element.querySelector('.service-description');
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';
+            } else {
+                description.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html> 
